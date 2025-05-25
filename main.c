@@ -34,7 +34,15 @@ int main(void){
     printf("LETTERBOXD só que BR\n");
     printf("-=-=-=-=-=-=-=-=-=-=-\n");
 
-    catalogo filme[3];
+    //criar vetor dinamico de filmes
+    catalogo* filme;
+    filme = (catalogo*)malloc(4 * sizeof(catalogo));
+
+    //verificando se a alocação deu certo
+    if(filme == NULL){
+        printf("Deu erro na alocação :(\n");
+        return -1;
+    }
 
     filme[0].nota = 4.9;
     filme[0].nome = "Velozes e Furiosos 1";
