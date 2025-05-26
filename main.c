@@ -7,7 +7,7 @@ typedef struct{
     char* nome; //nome do filme
     char* sinopse; //sinopse de cada filme
     char* tipo; //tipo de filme
-    int data; //data de lançamento
+    int dataLancamento; //data de lançamento
 } Filme;
 
 void print_boxed_text(char* text, int width){
@@ -29,6 +29,20 @@ void print_boxed_text(char* text, int width){
     }
 }
 
+void imprimeFilme(Filme *filme){
+  
+    printf("== Nome: %s\n------\n", filme->nome);
+    printf("== Sinopse: ");
+    print_boxed_text(filme->sinopse, 50);
+    printf("------\n");
+
+    printf("== Data de Lançamento: %d\n------\n", filme->dataLancamento);
+    
+    printf("== Nota: %.1f\n------\n", filme->nota);
+    printf("== Gênero: %s\n------\n", filme->tipo);
+
+}
+
 int main(void){
     printf("-=-=-=-=-=-=-=-=-=-=-\n");
     printf("LETTERBOXD só que BR\n");
@@ -44,25 +58,12 @@ int main(void){
         return -1;
     }
 
-    filme[0].nota = 4.9;
-    filme[0].nome = "Velozes e Furiosos 1";
-    filme[0].sinopse = "Brian O'Conner é um policial que se infiltra no submundo dos rachas de rua para investigar uma série de furtos. Enquanto tenta ganhar o respeito e a confiança do líder Dom Toretto, ele corre o risco de ser desmascarado.";
-    filme[0].data = 2001;
-    filme[0].tipo = "Ação";
+    filme[0] = (Filme){4.9, "Veloes e Furiosos 1","Brian O'Conner é um policial que se infiltra no submundo dos rachas de rua para investigar uma série de furtos. Enquanto tenta ganhar o respeito e a confiança do líder Dom Toretto, ele corre o risco de ser desmascarado.", "Ação", 2001};
 
-    printf("== Nome: %s\n------\n", filme[0].nome);
-    
-    printf("== Sinopse: ");
-    print_boxed_text(filme[0].sinopse, 50);
-    printf("------\n");
-
-    printf("== Data de Lançamento: %d\n------\n", filme[0].data);
-    
-    printf("== Nota: %.1f\n------\n", filme[0].nota);
-    printf("== Gênero: %s\n------\n", filme[0].tipo);
+    imprimeFilme(&filme[0]);
 
 
-
+    free(filme);
     return 0;
 }
 
