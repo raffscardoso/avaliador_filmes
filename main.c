@@ -8,7 +8,7 @@ typedef struct{
     char* sinopse; //sinopse de cada filme
     char* tipo; //tipo de filme
     int data; //data de lançamento
-} catalogo;
+} Filme;
 
 void print_boxed_text(char* text, int width){
     int i = 0, col = 0;
@@ -35,8 +35,8 @@ int main(void){
     printf("-=-=-=-=-=-=-=-=-=-=-\n");
 
     //criar vetor dinamico de filmes
-    catalogo* filme;
-    filme = (catalogo*)malloc(4 * sizeof(catalogo));
+    Filme* filme;
+    filme = (Filme*)malloc(4 * sizeof(Filme));
 
     //verificando se a alocação deu certo
     if(filme == NULL){
