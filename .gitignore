@@ -1,0 +1,20 @@
+# Arquivos temporários
+*.tmp
+*.bak
+*.log
+*~
+
+# Arquivos de compilação
+obj/
+bin/
+debug/
+release/
+
+# Outros arquivos
+*.o
+*.a
+*.lib
+
+# Arquivos gerados pelo sistema
+*.swp
+*.cache
