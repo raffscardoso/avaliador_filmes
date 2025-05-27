@@ -1,16 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "struct_Filme.h"
 
 #define NUM_FILMES 4
-
-typedef struct{
-    float nota; //0.0 até 5.0
-    char* nome; //nome do filme
-    char* sinopse; //sinopse de cada filme
-    char* tipo; //tipo de filme
-    int dataLancamento; //data de lançamento
-} Filme;
 
 void print_boxed_text(char* text, int width);
 void imprime_filme(Filme *filme);
