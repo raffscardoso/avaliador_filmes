@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <string.h>
 
+#define NUM_FILMES 4
+
 typedef struct{
     float nota; //0.0 até 5.0
     char* nome; //nome do filme
@@ -9,6 +11,32 @@ typedef struct{
     char* tipo; //tipo de filme
     int dataLancamento; //data de lançamento
 } Filme;
+
+void print_boxed_text(char* text, int width);
+void imprime_filme(Filme *filme);
+
+int main(void){
+    printf("-=-=-=-=-=-=-=-=-=-=-\n");
+    printf("LETTERBOXD só que BR\n");
+    printf("-=-=-=-=-=-=-=-=-=-=-\n");
+
+    //criar vetor dinamico de filmes
+    Filme* filme = NULL;
+    filme = (Filme*)malloc(NUM_FILMES * sizeof(Filme));
+
+    //verificando se a alocação deu certo
+    if(filme == NULL){
+        printf("Deu erro na alocação :(\n");
+        return -1;
+    }
+
+    filme[0] = (Filme){4.9, "Veloes e Furiosos 1","Brian O'Conner é um policial que se infiltra no submundo dos rachas de rua para investigar uma série de furtos. Enquanto tenta ganhar o respeito e a confiança do líder Dom Toretto, ele corre o risco de ser desmascarado.", "Ação", 2001};
+
+    imprime_filme(&filme[0]);
+
+    free(filme);
+    return 0;
+}
 
 void print_boxed_text(char* text, int width){
     int i = 0, col = 0;
@@ -29,7 +57,7 @@ void print_boxed_text(char* text, int width){
     }
 }
 
-void imprimeFilme(Filme *filme){
+void imprime_filme(Filme *filme){
   
     printf("== Nome: %s\n------\n", filme->nome);
     printf("== Sinopse: ");
@@ -43,29 +71,6 @@ void imprimeFilme(Filme *filme){
 
 }
 
-int main(void){
-    printf("-=-=-=-=-=-=-=-=-=-=-\n");
-    printf("LETTERBOXD só que BR\n");
-    printf("-=-=-=-=-=-=-=-=-=-=-\n");
-
-    //criar vetor dinamico de filmes
-    Filme* filme;
-    filme = (Filme*)malloc(4 * sizeof(Filme));
-
-    //verificando se a alocação deu certo
-    if(filme == NULL){
-        printf("Deu erro na alocação :(\n");
-        return -1;
-    }
-
-    filme[0] = (Filme){4.9, "Veloes e Furiosos 1","Brian O'Conner é um policial que se infiltra no submundo dos rachas de rua para investigar uma série de furtos. Enquanto tenta ganhar o respeito e a confiança do líder Dom Toretto, ele corre o risco de ser desmascarado.", "Ação", 2001};
-
-    imprimeFilme(&filme[0]);
-
-
-    free(filme);
-    return 0;
-}
 
 /*
 leiam:
