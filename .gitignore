@@ -6,6 +6,7 @@
 
 # Arquivos de compilação
 obj/
+output/
 bin/
 debug/
 release/
@@ -18,3 +19,6 @@ release/
 # Arquivos gerados pelo sistema
 *.swp
 *.cache
+
+#Arquivos vscode
+.vscode/
