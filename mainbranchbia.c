@@ -3,7 +3,7 @@
 #include <string.h>
 #include <time.h>
 #include "struct_Filme.h"
-#include <locale.h>
+
 
 #define NUM_FILMES 4
 
@@ -12,7 +12,7 @@ void imprime_filme(Filme *filme);
 void recomenda_aleatorio(Filme *filmes, int num_filmes);
 
 int main(void){
-    setlocale(LC_ALL, ",Portuguese_Brazil.utf8");
+   
 
     printf("-=-=-=-=-=-=-=-=-=-=-\n");
     printf("LETTERBOXD só que BR\n");
