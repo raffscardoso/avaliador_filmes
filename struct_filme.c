@@ -123,3 +123,86 @@ void liberar_array(ArrayDeFilmes* arr){
     arr->capacidade = 0;
     arr->tamanho_atual = 0;
 }
+
+void adicionar_novo_filme(ArrayDeFilmes* arr){
+    Filme novo_filme;
+
+    char buffer[TAMANHO_LINHA];
+
+    printf("\n----- Adicionar Novo Filme -----\n");
+
+    //nome
+    printf("NOME: ");
+    fgets(buffer, sizeof(buffer), stdin);
+    remover_nova_linha(buffer);
+    novo_filme.nome = strdup(buffer);
+
+    //ano de lançamento
+    printf("ANO: ");
+    fgets(buffer, sizeof(buffer), stdin);
+    novo_filme.dataLancamento = atoi(buffer);
+
+    //nota
+    printf("NOTA (0.0 - 10.0): ");
+    fgets(buffer, sizeof(buffer), stdin);
+    novo_filme.nota = atof(buffer);
+
+    //genero(tipo)
+    printf("Gênero: ");
+    fgets(buffer, sizeof(buffer), stdin);
+    remover_nova_linha(buffer);
+    novo_filme.tipo = strdup(buffer);
+
+    //sinopse
+    printf("Sinopse (digite ENTER para novas linhas)\n");
+    printf("Para finalizar, digite FIM em uma nova linha e pressione ENTER\n");
+
+    char buffer_sinopse[TAMANHO_SINOPSE] = "";
+
+    while(fgets(buffer, sizeof(buffer), stdin) != NULL){
+        if(strncmp(buffer, "FIM\n", 4) == 0){
+            break;
+        }
+        strcat(buffer_sinopse, buffer);
+    }
+    novo_filme.sinopse = strdup(buffer_sinopse);
+
+    adicionar_filme_ao_array(arr, novo_filme);
+
+    printf("\n [SUCESSO] - Filme %s adicionado ao banco de dados.\n", novo_filme.nome);
+    printf("Lembre-se de salvar ao sair do programa para manter as alterações!\n");
+
+}
+
+//salvar as alterações no banco de dados (arquivo)
+void salvar_para_arquivo(const char* nome_arquivo, const ArrayDeFilmes* arr) {
+    FILE* arquivo = fopen(nome_arquivo, "w");
+
+    if (arquivo == NULL) {
+        perror("ERRO CRÍTICO: Não foi possível abrir o arquivo para salvar");
+        return;
+    }
+
+    // Percorre o array na memória
+    for (int i = 0; i < arr->tamanho_atual; i++) {
+        Filme filme_atual = arr->filmes[i];
+        
+        fprintf(arquivo, "===FILME===\n");
+        fprintf(arquivo, "NOME: %s\n", filme_atual.nome ? filme_atual.nome : "");
+        fprintf(arquivo, "DATA: %d\n", filme_atual.dataLancamento);
+        fprintf(arquivo, "NOTA: %.1f\n", filme_atual.nota);
+        fprintf(arquivo, "GENERO: %s\n", filme_atual.tipo ? filme_atual.tipo : "");
+
+        //gravar a sinopse da maneira certa
+        fprintf(arquivo, "SINOPSE_INICIO\n");
+        fprintf(arquivo, "%s", filme_atual.sinopse ? filme_atual.sinopse : "");
+        
+        // Garante que a sinopse termine com \n antes do marcador de fim
+        if (filme_atual.sinopse && strlen(filme_atual.sinopse) > 0 && filme_atual.sinopse[strlen(filme_atual.sinopse)-1] != '\n') {
+            fprintf(arquivo, "\n");
+        }
+        fprintf(arquivo, "SINOPSE_FIM\n");
+    }
+
+    fclose(arquivo);
+}

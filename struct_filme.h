@@ -21,5 +21,7 @@ void inicializar_array(ArrayDeFilmes* arr);
 void adicionar_filme_ao_array(ArrayDeFilmes* arr, Filme filme);
 void carregar_filmes(const char* nome_arquivo, ArrayDeFilmes* arr);
 void liberar_array(ArrayDeFilmes* arr);
+void adicionar_novo_filme(ArrayDeFilmes* arr);
+void salvar_para_arquivo(const char* nome_arquivo, const ArrayDeFilmes* arr);
 
 #endif // !STRUCT_FILME

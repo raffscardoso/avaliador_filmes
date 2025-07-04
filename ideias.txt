@@ -1,3 +1,6 @@
+copilar:
+gcc main.c struct_filme.c -o ./bin/main
+
 
 leiam:
 a ideia final é realmente ter um arquivo para puxarmos ne essas informações de cada livro
