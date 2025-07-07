@@ -72,12 +72,24 @@ void carregar_filmes(const char* nome_arquivo, ArrayDeFilmes* arr){
 
         if(strncmp(linha, "NOME: ", 6) == 0){
             filme_temp.nome = strdup(linha + 6);
+            if (filme_temp.nome == NULL) {
+              perror("ERRO na alocacao do NOME do filme");
+              filme_temp.sinopse = NULL;
+              filme_temp.tipo = NULL;
+              continue;
+            }
         }else if(strncmp(linha, "DATA: ", 6) == 0){
             filme_temp.dataLancamento = atoi(linha + 6);
         }else if(strncmp(linha, "NOTA: ", 6) == 0){
             filme_temp.nota = atof(linha + 6);
         }else if(strncmp(linha, "GENERO: ", 6) == 0){
             filme_temp.tipo = strdup(linha + 6);
+            if(filme_temp.tipo == NULL){
+              perror("ERRO na alocacao do TIPO/GENERO do filme");
+              filme_temp.nome = NULL;
+              filme_temp.sinopse = NULL;
+              continue;
+            }
         }else if(strcmp(linha, "SINOPSE_INICIO") == 0){
             char buffer_sinopse[TAMANHO_SINOPSE] = "";
 
@@ -93,6 +105,12 @@ void carregar_filmes(const char* nome_arquivo, ArrayDeFilmes* arr){
             }
 
             filme_temp.sinopse = strdup(buffer_sinopse);
+            if(filme_temp.sinopse == NULL){
+              perror("ERRO na alocacao da SINOPSE do filme");
+              filme_temp.nome = NULL;
+              filme_temp.tipo = NULL;
+              continue;
+            }
 
             adicionar_filme_ao_array(arr, filme_temp);
 
