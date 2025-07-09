@@ -26,5 +26,6 @@ void remover_filme(ArrayDeFilmes* arr);
 void salvar_para_arquivo(const char* nome_arquivo, const ArrayDeFilmes* arr);
 void buscar_filme(const ArrayDeFilmes* arr);
 void listar_filmes(const ArrayDeFilmes* arr);
+char* converter_string_para_lowercase(const char* str);
 
 #endif // !STRUCT_FILME
