@@ -26,7 +26,7 @@ int main(void) {
         printf("\n=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n");
         printf("            MENU\n");
         printf("[1] ADICIONAR FILME\n");
-        printf("[2] BUSCAR FILME (Não implementado)\n");
+        printf("[2] BUSCAR FILME\n");
         printf("[3] REMOVER FILME\n");
         printf("[4] SALVAR ALTERAÇÕES E SAIR\n");
         printf("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n");
@@ -40,7 +40,7 @@ int main(void) {
                 adicionar_novo_filme(&meu_banco_de_dados);
                 break;
             case 2:
-                printf("\nFunção de busca ainda não implementada.\n");
+                buscar_filme(&meu_banco_de_dados);
                 break;
 
             case 3:
