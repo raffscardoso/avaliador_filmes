@@ -2,26 +2,26 @@
 NOME: Veloes e Furiosos 1
 DATA: 2001
 NOTA: 4.9
-GENERO: : : : : : : Ação
+GENERO: : AÃ§Ã£o
 SINOPSE_INICIO
-Brian O'Conner é um policial que se infiltra no submundo dos rachas de rua para investigar uma série de furtos. Enquanto tenta ganhar o respeito e a confiança do líder Dom Toretto, ele corre o risco de ser desmascarado.
+Brian O'Conner Ã© um policial que se infiltra no submundo dos rachas de rua para investigar uma sÃ©rie de furtos. Enquanto tenta ganhar o respeito e a confianÃ§a do lÃ­der Dom Toretto, ele corre o risco de ser desmascarado.
 SINOPSE_FIM
 ===FILME===
 NOME: Parasita
 DATA: 7
 NOTA: 8.5
-GENERO: : : : : : : TERROR
+GENERO: : TERROR
 SINOPSE_INICIO
-Toda a família de Ki-taek está desempregada, vivendo em um porão sujo e apertado. Uma obra do acaso faz com que o filho adolescente da família comece a dar aulas de inglês para uma garota de família rica. Fascinados com a vida luxuosa, pai, mãe, filho e filha bolam um plano para se infiltrarem na vida da família burguesa.
+Toda a famÃ­lia de Ki-taek estÃ¡ desempregada, vivendo em um porÃ£o sujo e apertado. Uma obra do acaso faz com que o filho adolescente da famÃ­lia comece a dar aulas de inglÃªs para uma garota de famÃ­lia rica. Fascinados com a vida luxuosa, pai, mÃ£e, filho e filha bolam um plano para se infiltrarem na vida da famÃ­lia burguesa.
 SINOPSE_FIM
 ===FILME===
-NOME: O Poderoso Chefão
+NOME: O Poderoso ChefÃ£o
 DATA: 1972
 NOTA: 9.2
-GENERO: : : : : : : SUSPENSE
+GENERO: : SUSPENSE
 SINOPSE_INICIO
-Um patriarca de uma organização criminosa transfere o controle de seu império para seu filho relutante.
-A sinopse pode ter várias linhas e continua até o marcador de fim.
+Um patriarca de uma organizaÃ§Ã£o criminosa transfere o controle de seu impÃ©rio para seu filho relutante.
+A sinopse pode ter vÃ¡rias linhas e continua atÃ© o marcador de fim.
 SINOPSE_FIM
 ===FILME===
 NOME: Oldboy
@@ -29,7 +29,7 @@ DATA: 2003
 NOTA: 9.0
 GENERO: Suspense
 SINOPSE_INICIO
-Dae-se � raptado e mantido preso em cativeiro por 15 anos, sem contato com o mundo externo. Quando ele � inexplicavelmente solto, descobre que esta sendo acusadopelo assassinato da esposa e embarca numa miss�o obssessiva por vingan�a.
+Dae-se , raptado e mantido preso em cativeiro por 15 anos, sem contato com o mundo externo. Quando ele ‚ inexplicavelmente solto, descobre que esta sendo acusadopelo assassinato da esposa e embarca numa missÆo obssessiva por vingan‡a.
 SINOPSE_FIM
 ===FILME===
 NOME: Antes do amanhecer
@@ -37,9 +37,5 @@ DATA: 1995
 NOTA: 7.8
 GENERO: Romance
 SINOPSE_INICIO
-Jesse e Celine se conhecem em uma viagem de trem para Paris, e come�am uma conversa que os leva a fazer escala em Viena, sem imaginar o que o destino os reserva.FIM
-
-
-
-Jesse e Celine se conhecem em uma viagem de trem para Paris, e come�am uma conversa que os leva a fazer escala em Viena, sem imaginar o que o destino os reserva.
+Jesse e Celine se conhecem em uma viagem de trem para Paris, e come‡am uma conversa que os leva a fazer escala em Viena, sem imaginar o que o destino os reserva.
 SINOPSE_FIM
