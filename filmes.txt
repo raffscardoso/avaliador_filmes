@@ -2,7 +2,7 @@
 NOME: Veloes e Furiosos 1
 DATA: 2001
 NOTA: 4.9
-GENERO: : : : Ação
+GENERO: : : : : Ação
 SINOPSE_INICIO
 Brian O'Conner é um policial que se infiltra no submundo dos rachas de rua para investigar uma série de furtos. Enquanto tenta ganhar o respeito e a confiança do líder Dom Toretto, ele corre o risco de ser desmascarado.
 SINOPSE_FIM
@@ -10,7 +10,7 @@ SINOPSE_FIM
 NOME: Parasita
 DATA: 7
 NOTA: 8.5
-GENERO: : : : TERROR
+GENERO: : : : : TERROR
 SINOPSE_INICIO
 Toda a família de Ki-taek está desempregada, vivendo em um porão sujo e apertado. Uma obra do acaso faz com que o filho adolescente da família comece a dar aulas de inglês para uma garota de família rica. Fascinados com a vida luxuosa, pai, mãe, filho e filha bolam um plano para se infiltrarem na vida da família burguesa.
 SINOPSE_FIM
@@ -18,7 +18,7 @@ SINOPSE_FIM
 NOME: O Poderoso Chefão
 DATA: 1972
 NOTA: 9.2
-GENERO: : : : SUSPENSE
+GENERO: : : : : SUSPENSE
 SINOPSE_INICIO
 Um patriarca de uma organização criminosa transfere o controle de seu império para seu filho relutante.
 A sinopse pode ter várias linhas e continua até o marcador de fim.
