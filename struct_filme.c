@@ -223,4 +223,43 @@ void salvar_para_arquivo(const char* nome_arquivo, const ArrayDeFilmes* arr) {
     }
 
     fclose(arquivo);
+
 }
+void buscar_filme(const ArrayDeFilmes* arr) {
+    if (arr->tamanho_atual == 0) {
+        printf("Nenhum filme na memória.\n");
+        return;
+    }
+
+    char termo[256];
+    printf("\n----- BUSCAR FILME -----\n");
+    printf("Digite parte do nome do filme a ser buscado: ");
+    getchar(); // Limpa '\n' pendente
+    fgets(termo, sizeof(termo), stdin);
+    remover_nova_linha(termo);
+
+    int encontrou = 0;
+
+    for (int i = 0; i < arr->tamanho_atual; i++) {
+        if (arr->filmes[i].nome && strstr(arr->filmes[i].nome, termo)) {
+            encontrou = 1;
+
+            printf("\n=== Filme %d ===\n", i + 1);
+            printf("Nome: %s\n", arr->filmes[i].nome);
+            printf("Ano: %d\n", arr->filmes[i].dataLancamento);
+            printf("Nota: %.1f\n", arr->filmes[i].nota);
+            printf("Gênero: %s\n", arr->filmes[i].tipo ? arr->filmes[i].tipo : "(sem gênero)");
+            printf("Sinopse:\n%s\n", arr->filmes[i].sinopse ? arr->filmes[i].sinopse : "(sem sinopse)");
+        }
+    }
+
+    if (!encontrou) {
+        printf("\nNenhum filme encontrado com esse termo.\n");
+    }
+
+    printf("\nPressione ENTER para continuar...");
+    getchar();
+}
+
+
+
