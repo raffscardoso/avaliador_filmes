@@ -107,8 +107,8 @@ void carregar_filmes(const char* nome_arquivo, ArrayDeFilmes* arr){
             filme_temp.dataLancamento = atoi(linha + 6);
         }else if(strncmp(linha, "NOTA: ", 6) == 0){
             filme_temp.nota = atof(linha + 6);
-        }else if(strncmp(linha, "GENERO: ", 6) == 0){
-            filme_temp.tipo = strdup(linha + 6);
+        }else if(strncmp(linha, "GENERO: ", 8) == 0){
+            filme_temp.tipo = strdup(linha + 8);
             if(filme_temp.tipo == NULL){
               perror("ERRO na alocacao do TIPO/GENERO do filme");
               filme_temp.nome = NULL;
