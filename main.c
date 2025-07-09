@@ -42,9 +42,9 @@ int main(void) {
             case 2:
                 buscar_filme(&meu_banco_de_dados);
                 break;
-
-            case 3:
+            case 3: 
                 remover_filme(&meu_banco_de_dados);
+                break;  
             case 4:
                 printf("\nSalvando dados no arquivo 'filmes.txt'...\n");
                 salvar_para_arquivo("filmes.txt", &meu_banco_de_dados);

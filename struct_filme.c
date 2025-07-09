@@ -7,6 +7,11 @@
 #define TAMANHO_LINHA 2048
 #define TAMANHO_SINOPSE 4096
 
+void limpar_buffer_entrada_usuario(){
+  int c;
+  while((c = getchar()) != '\n' && c != EOF);
+}
+
 void remover_nova_linha(char* str){
     size_t len = strlen(str);
 
@@ -207,6 +212,13 @@ void remover_filme(ArrayDeFilmes* arr){
     int filme_numero;
     sscanf(buffer, "%d",&filme_numero);
     int indice_remov= filme_numero-1;
+    
+    if(indice_remov < 0 || indice_remov >= arr->tamanho_atual){
+      printf("\nERRO, Numero de filme invalido!\n");
+      return;
+    }
+
+    printf("\n Removendo o filme: %s\n", arr->filmes[indice_remov].nome);
 
     free(arr->filmes[indice_remov].nome);
     free(arr->filmes[indice_remov].tipo);
@@ -217,6 +229,8 @@ void remover_filme(ArrayDeFilmes* arr){
     }
 
     arr->tamanho_atual--;
+
+    limpar_buffer_entrada_usuario();
 
 }
 
@@ -263,7 +277,7 @@ void buscar_filme(const ArrayDeFilmes* arr) {
     char termo[256];
     printf("\n----- BUSCAR FILME -----\n");
     printf("Digite parte do nome do filme a ser buscado: ");
-    getchar(); // Limpa '\n' pendente
+
     fgets(termo, sizeof(termo), stdin);
     remover_nova_linha(termo);
 
@@ -287,7 +301,8 @@ void buscar_filme(const ArrayDeFilmes* arr) {
     }
 
     printf("\nPressione ENTER para continuar...");
-    getchar();
+
+    limpar_buffer_entrada_usuario();
 }
 
 
