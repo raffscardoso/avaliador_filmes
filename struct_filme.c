@@ -154,29 +154,24 @@ void adicionar_novo_filme(ArrayDeFilmes* arr){
 
     printf("\n----- Adicionar Novo Filme -----\n");
 
-    //nome
     printf("NOME: ");
     fgets(buffer, sizeof(buffer), stdin);
     remover_nova_linha(buffer);
     novo_filme.nome = strdup(buffer);
 
-    //ano de lançamento
     printf("ANO: ");
     fgets(buffer, sizeof(buffer), stdin);
     novo_filme.dataLancamento = atoi(buffer);
 
-    //nota
     printf("NOTA (0.0 - 10.0): ");
     fgets(buffer, sizeof(buffer), stdin);
     novo_filme.nota = atof(buffer);
 
-    //genero(tipo)
     printf("Gênero: ");
     fgets(buffer, sizeof(buffer), stdin);
     remover_nova_linha(buffer);
     novo_filme.tipo = strdup(buffer);
 
-    //sinopse
     printf("Sinopse (digite ENTER para novas linhas)\n");
     printf("Para finalizar, digite FIM em uma nova linha e pressione ENTER\n");
 
@@ -305,5 +300,15 @@ void buscar_filme(const ArrayDeFilmes* arr) {
     limpar_buffer_entrada_usuario();
 }
 
+void listar_filmes(const ArrayDeFilmes *arr){
+ if(arr->tamanho_atual == 0) {
+   printf("Nenhum filme na memoria.\n");
+   return;
+ }
+
+ for(int i = 0; i < arr->tamanho_atual; i++){
+   printf("\nFilme %d: %s", (i + 1), arr->filmes[i].nome);
+ }
+}
 
 

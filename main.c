@@ -3,8 +3,6 @@
 #include <string.h>
 #include "struct_filme.h"
 
-
-//protótipo de funções locais
 void imprime_filme(const ArrayDeFilmes* arr);
 
 int main(void) {
@@ -28,7 +26,8 @@ int main(void) {
         printf("[1] ADICIONAR FILME\n");
         printf("[2] BUSCAR FILME\n");
         printf("[3] REMOVER FILME\n");
-        printf("[4] SALVAR ALTERAÇÕES E SAIR\n");
+        printf("[4] LISTAR FILMES\n");
+        printf("[5] SALVAR ALTERAÇÕES E SAIR\n");
         printf("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n");
         printf("Escolha uma opção: ");
 
@@ -46,6 +45,9 @@ int main(void) {
                 remover_filme(&meu_banco_de_dados);
                 break;  
             case 4:
+                listar_filmes(&meu_banco_de_dados);
+                break;
+            case 5:
                 printf("\nSalvando dados no arquivo 'filmes.txt'...\n");
                 salvar_para_arquivo("filmes.txt", &meu_banco_de_dados);
                 printf("Dados salvos! Saindo...\n");
@@ -61,7 +63,6 @@ int main(void) {
     return 0;
 }
 
-//imprimir os filmes
 void imprime_filme(const ArrayDeFilmes* arr) {
     if (arr->tamanho_atual == 0) {
         printf("Nenhum filme na memória.\n");
