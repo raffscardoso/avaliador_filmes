@@ -192,6 +192,35 @@ void adicionar_novo_filme(ArrayDeFilmes* arr){
 
 }
 
+
+void remover_filme(ArrayDeFilmes* arr){
+
+    
+
+    for (int i=0; i <arr->tamanho_atual; i++){
+        printf("[%d]- %s\n", i+1, arr->filmes[i].nome);
+    }
+    char buffer[10];
+    printf("Digite o numero do film para remover");
+    fgets(buffer, sizeof(buffer), stdin);
+    
+    int filme_numero;
+    sscanf(buffer, "%d",&filme_numero);
+    int indice_remov= filme_numero-1;
+
+    free(arr->filmes[indice_remov].nome);
+    free(arr->filmes[indice_remov].tipo);
+    free(arr->filmes[indice_remov].sinopse);
+
+    for(int i=indice_remov; i<arr-> tamanho_atual-1;i++){
+        arr->filmes[i]= arr->filmes[i+1];
+    }
+
+    arr->tamanho_atual--;
+
+}
+
+
 //salvar as alterações no banco de dados (arquivo)
 void salvar_para_arquivo(const char* nome_arquivo, const ArrayDeFilmes* arr) {
     FILE* arquivo = fopen(nome_arquivo, "w");
