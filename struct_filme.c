@@ -1,11 +1,31 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <ctype.h>
 #include "struct_filme.h"
 
 #define TAMANHO_INICIAL_ARRAY 10
 #define TAMANHO_LINHA 2048
 #define TAMANHO_SINOPSE 4096
+
+char* converter_string_para_lowercase(const char* str){
+  if(str == NULL){
+    return NULL;
+  }
+
+  char* str_minuscula = malloc(strlen(str) + 1);
+  if(str_minuscula == NULL){
+    perror("Erro na alocacao de memoria na da string em letras minusculas!");
+    return NULL;
+  }
+
+  for(int i = 0; str[i] != '\0'; i++){
+    str_minuscula[i] = tolower((unsigned char)str[i]);
+  }
+  str_minuscula[strlen(str)] = '\0';
+
+  return str_minuscula;
+}
 
 void limpar_buffer_entrada_usuario(){
   int c;
@@ -272,14 +292,27 @@ void buscar_filme(const ArrayDeFilmes* arr) {
     char termo[256];
     printf("\n----- BUSCAR FILME -----\n");
     printf("Digite parte do nome do filme a ser buscado: ");
-
     fgets(termo, sizeof(termo), stdin);
     remover_nova_linha(termo);
 
     int encontrou = 0;
 
+    char* termo_minusculo = converter_string_para_lowercase(termo);
+    if(termo_minusculo == NULL){
+      perror("Erro ao processar termo minusculo");
+      return;
+    }
+
     for (int i = 0; i < arr->tamanho_atual; i++) {
-        if (arr->filmes[i].nome && strstr(arr->filmes[i].nome, termo)) {
+
+      char* nome_filme_minusculo = converter_string_para_lowercase(arr->filmes[i].nome);
+      if(nome_filme_minusculo == NULL){
+        printf("Erro ao processar nome do filme na busca.\n");
+        continue;
+      }
+
+
+        if (strstr(nome_filme_minusculo, termo_minusculo)) {
             encontrou = 1;
 
             printf("\n=== Filme %d ===\n", i + 1);
@@ -290,6 +323,9 @@ void buscar_filme(const ArrayDeFilmes* arr) {
             printf("Sinopse:\n%s\n", arr->filmes[i].sinopse ? arr->filmes[i].sinopse : "(sem sinopse)");
         }
     }
+
+
+    free(termo_minusculo);
 
     if (!encontrou) {
         printf("\nNenhum filme encontrado com esse termo.\n");
