@@ -27,7 +27,8 @@ int main(void) {
         printf("            MENU\n");
         printf("[1] ADICIONAR FILME\n");
         printf("[2] BUSCAR FILME (Não implementado)\n");
-        printf("[3] SALVAR ALTERAÇÕES E SAIR\n");
+        printf("[3] REMOVER FILME\n");
+        printf("[4] SALVAR ALTERAÇÕES E SAIR\n");
         printf("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n");
         printf("Escolha uma opção: ");
 
@@ -41,7 +42,10 @@ int main(void) {
             case 2:
                 printf("\nFunção de busca ainda não implementada.\n");
                 break;
+
             case 3:
+                remover_filme(&meu_banco_de_dados);
+            case 4:
                 printf("\nSalvando dados no arquivo 'filmes.txt'...\n");
                 salvar_para_arquivo("filmes.txt", &meu_banco_de_dados);
                 printf("Dados salvos! Saindo...\n");
