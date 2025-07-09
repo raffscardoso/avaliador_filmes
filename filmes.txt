@@ -2,7 +2,7 @@
 NOME: Veloes e Furiosos 1
 DATA: 2001
 NOTA: 4.9
-GENERO: : : : : Ação
+GENERO: : : : : : : Ação
 SINOPSE_INICIO
 Brian O'Conner é um policial que se infiltra no submundo dos rachas de rua para investigar uma série de furtos. Enquanto tenta ganhar o respeito e a confiança do líder Dom Toretto, ele corre o risco de ser desmascarado.
 SINOPSE_FIM
@@ -10,7 +10,7 @@ SINOPSE_FIM
 NOME: Parasita
 DATA: 7
 NOTA: 8.5
-GENERO: : : : : TERROR
+GENERO: : : : : : : TERROR
 SINOPSE_INICIO
 Toda a família de Ki-taek está desempregada, vivendo em um porão sujo e apertado. Uma obra do acaso faz com que o filho adolescente da família comece a dar aulas de inglês para uma garota de família rica. Fascinados com a vida luxuosa, pai, mãe, filho e filha bolam um plano para se infiltrarem na vida da família burguesa.
 SINOPSE_FIM
@@ -18,8 +18,28 @@ SINOPSE_FIM
 NOME: O Poderoso Chefão
 DATA: 1972
 NOTA: 9.2
-GENERO: : : : : SUSPENSE
+GENERO: : : : : : : SUSPENSE
 SINOPSE_INICIO
 Um patriarca de uma organização criminosa transfere o controle de seu império para seu filho relutante.
 A sinopse pode ter várias linhas e continua até o marcador de fim.
+SINOPSE_FIM
+===FILME===
+NOME: Oldboy
+DATA: 2003
+NOTA: 9.0
+GENERO: Suspense
+SINOPSE_INICIO
+Dae-se � raptado e mantido preso em cativeiro por 15 anos, sem contato com o mundo externo. Quando ele � inexplicavelmente solto, descobre que esta sendo acusadopelo assassinato da esposa e embarca numa miss�o obssessiva por vingan�a.
+SINOPSE_FIM
+===FILME===
+NOME: Antes do amanhecer
+DATA: 1995
+NOTA: 7.8
+GENERO: Romance
+SINOPSE_INICIO
+Jesse e Celine se conhecem em uma viagem de trem para Paris, e come�am uma conversa que os leva a fazer escala em Viena, sem imaginar o que o destino os reserva.FIM
+
+
+
+Jesse e Celine se conhecem em uma viagem de trem para Paris, e come�am uma conversa que os leva a fazer escala em Viena, sem imaginar o que o destino os reserva.
 SINOPSE_FIM
