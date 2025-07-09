@@ -23,5 +23,6 @@ void carregar_filmes(const char* nome_arquivo, ArrayDeFilmes* arr);
 void liberar_array(ArrayDeFilmes* arr);
 void adicionar_novo_filme(ArrayDeFilmes* arr);
 void salvar_para_arquivo(const char* nome_arquivo, const ArrayDeFilmes* arr);
+void buscar_filme(const ArrayDeFilmes* arr);
 
 #endif // !STRUCT_FILME
