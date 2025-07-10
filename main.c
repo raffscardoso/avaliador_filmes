@@ -1,11 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <time.h>
 #include "struct_filme.h"
 
 void imprime_filme(const ArrayDeFilmes* arr);
 
 int main(void) {
+     srand(time(NULL));
+
+
     printf("-=-=-=-=-=-=-=-=-=-=-\n");
     printf("LETTERBOXD só que BR\n");
     printf("-=-=-=-=-=-=-=-=-=-=-\n");
@@ -20,14 +24,15 @@ int main(void) {
     int opcao_menu = 0;
     char buffer_opcao[10];
 
-    while (opcao_menu != 3) {
+    while (opcao_menu != 6) {
         printf("\n=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n");
         printf("            MENU\n");
         printf("[1] ADICIONAR FILME\n");
         printf("[2] BUSCAR FILME\n");
         printf("[3] REMOVER FILME\n");
         printf("[4] LISTAR FILMES\n");
-        printf("[5] SALVAR ALTERAÇÕES E SAIR\n");
+        printf("[5] RECOMENDAÇAO DE FILME ALEATORIO\n");
+        printf("[6] SALVAR ALTERAÇÕES E SAIR\n");
         printf("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n");
         printf("Escolha uma opção: ");
 
@@ -48,6 +53,9 @@ int main(void) {
                 listar_filmes(&meu_banco_de_dados);
                 break;
             case 5:
+                recomenda_aleatorio(&meu_banco_de_dados);
+                break;
+            case 6:
                 printf("\nSalvando dados no arquivo 'filmes.txt'...\n");
                 salvar_para_arquivo("filmes.txt", &meu_banco_de_dados);
                 printf("Dados salvos! Saindo...\n");
