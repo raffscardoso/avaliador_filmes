@@ -215,8 +215,6 @@ void adicionar_novo_filme(ArrayDeFilmes* arr){
 
 void remover_filme(ArrayDeFilmes* arr){
 
-    
-
     for (int i=0; i <arr->tamanho_atual; i++){
         printf("[%d]- %s\n", i+1, arr->filmes[i].nome);
     }
@@ -247,6 +245,23 @@ void remover_filme(ArrayDeFilmes* arr){
 
     limpar_buffer_entrada_usuario();
 
+}
+
+
+void recomenda_aleatorio(const ArrayDeFilmes* arr) {
+    printf("\n----- Recomendação do Dia -----\n");
+
+    int ialeatorio = rand() % arr->tamanho_atual;
+
+    Filme filme_sorteado = arr->filmes[ialeatorio];
+   
+    printf("Recomendação: \n\n");
+    printf("  == Nome: %s\n", filme_sorteado.nome);
+    printf("  == Ano de Lançamento: %d\n", filme_sorteado.dataLancamento);
+    printf("  == Nota: %.1f\n", filme_sorteado.nota);
+    printf("  == Gênero: %s\n", filme_sorteado.tipo);
+    printf("  == Sinopse: %s\n", filme_sorteado.sinopse ? filme_sorteado.sinopse : "(vazia)");
+    printf("-----------------------------------\n");
 }
 
 
