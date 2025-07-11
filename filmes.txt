@@ -4,7 +4,8 @@ DATA: 2001
 NOTA: 4.9
 GENERO: Ação
 SINOPSE_INICIO
-Brian O'Conner é um policial que se infiltra no submundo dos rachas de rua para investigar uma série de furtos. Enquanto tenta ganhar o respeito e a confiança do líder Dom Toretto, ele corre o risco de ser desmascarado.
+Brian O'Conner é um policial que se infiltra no submundo dos rachas de rua para investigar uma série de furtos.
+Enquanto tenta ganhar o respeito e a confiança do líder Dom Toretto, ele corre o risco de ser desmascarado.
 SINOPSE_FIM
 ===FILME===
 NOME: Parasita
@@ -12,7 +13,9 @@ DATA: 7
 NOTA: 8.5
 GENERO: TERROR
 SINOPSE_INICIO
-Toda a família de Ki-taek está desempregada, vivendo em um porão sujo e apertado. Uma obra do acaso faz com que o filho adolescente da família comece a dar aulas de inglês para uma garota de família rica. Fascinados com a vida luxuosa, pai, mãe, filho e filha bolam um plano para se infiltrarem na vida da família burguesa.
+Toda a família de Ki-taek está desempregada, vivendo em um porão sujo e apertado. Uma obra do acaso faz com que o
+filho adolescente da família comece a dar aulas de inglês para uma garota de família rica. Fascinados com a vida luxuosa,
+pai, mãe, filho e filha bolam um plano para se infiltrarem na vida da família burguesa.
 SINOPSE_FIM
 ===FILME===
 NOME: O Poderoso Chefão
@@ -22,4 +25,167 @@ GENERO: SUSPENSE
 SINOPSE_INICIO
 Um patriarca de uma organização criminosa transfere o controle de seu império para seu filho relutante.
 A sinopse pode ter várias linhas e continua até o marcador de fim.
+SINOPSE_FIM
+===FILME===
+NOME: Vingadores: Guerra Infinita
+DATA: 2018
+NOTA: 4.9
+GENERO: Ficção Científica
+SINOPSE_INICIO
+Homem de Ferro, Capitão América, Thor, Hulk e os Vingadores se unem para combater o maligno Thanos.
+Em uma missão para coletar todas as seis pedras infinitas, Thanos planeja usá-las para infligir sua
+vontade maléfica sobre a humanidade.
+SINOPSE_FIM
+===FILME===
+NOME: Vingadores: Ultimato
+DATA: 2019
+NOTA: 5.0
+GENERO: Ficção Científica
+SINOPSE_INICIO
+Após Thanos eliminar metade das criaturas vivas, os Vingadores têm de lidar com a perda de amigos e
+entes queridos. Com Tony Stark vagando perdido no espaço sem água e comida, Steve Rogers e Natasha Romanov
+lideram a resistência contra o titã louco.
+SINOPSE_FIM
+===FILME===
+NOME: Quebrando Regras
+DATA: 2008
+NOTA: 3.5
+GENERO: Ação
+SINOPSE_INICIO
+Jake muda para Orlando com a família. Sentindo-se deslocado na escola e com problemas de temperamento,
+vai a uma festa onde é humilhado numa briga. Um colega o incentiva a procurar Jean Roqua, treinador de
+artes marciais e começar a treinar com ele.
+SINOPSE_FIM
+===FILME===
+NOME: A Chegada 
+DATA: 2016
+NOTA: 4.2
+GENERO: Ficção Científica
+SINOPSE_INICIO
+Naves alienígenas chegaram às principais cidades do mundo. Com a intenção de se comunicar com os visitantes,
+uma linguista e um militar são chamados para decifrar as estranhas mensagens dos visitantes.
+SINOPSE_FIM
+===FILME===
+NOME: Oppenheimer
+DATA: 2023
+NOTA: 4.6
+GENERO: Suspense
+SINOPSE_INICIO
+O físico J. Robert Oppenheimer trabalha com uma equipe de cientistas durante o
+Projeto Manhattan, levando ao desenvolvimento da bomba atômica.
+SINOPSE_FIM
+===FILME===
+NOME: Chefes de Estado
+DATA: 2025
+NOTA: 3.5
+GENERO: Ação
+SINOPSE_INICIO
+O presidente estadunidense Will Derringer e o primeiro-ministro britânico Sam Clarke têm uma rivalidade nada amigável
+e bastante pública. No entanto, quando o Força Aérea Um é abatido em território inimigo, eles trabalham juntos para
+frustrarem uma conspiração global que ameaça todo o mundo.
+SINOPSE_FIM
+===FILME===
+NOME: Homem-Aranha: De Volta ao Lar
+DATA: 2017
+NOTA: 4.1
+GENERO: Ficção Científica
+SINOPSE_INICIO
+Depois de lutar ao lado dos Vingadores, chegou a hora do jovem Peter Parker voltar para casa em Nova York ao lado de sua tia May.
+Sob o olhar atento do mentor Tony Stark, Peter começa a abraçar sua nova identidade como Homem-Aranha e combate diariamente pequenos
+crimes nas redondezas. Ele acredita que encontrou a missão de sua vida quando o terrível vilão Abutre surge ameaçando a cidade. O problema
+é que a tarefa não será tão fácil como ele imaginava.
+SINOPSE_FIM
+===FILME===
+NOME: Premonição 6: Laços de Sangue
+DATA: 2025
+NOTA: 3.9
+GENERO: Terror
+SINOPSE_INICIO
+Atormentada por um pesadelo violento e recorrente, uma estudante universitária volta para casa em busca da única pessoa que pode ser capaz de
+quebrar o ciclo de morte e salvar sua família do terrível destino que inevitavelmente os aguarda.
+SINOPSE_FIM
+===FILME===
+NOME: Invencível
+DATA: 2025
+NOTA: 5.0
+GENERO: Drama
+SINOPSE_INICIO
+Scott e Teresa descobrem que seu filho, Austin, é autista e tem uma doença óssea frágil. Eles se preocupam com o futuro dele, mas com a fé crescente
+de Scott e o espírito incrível de Austin, eles encontram alegria, gratidão e coragem.
+SINOPSE_FIM
+===FILME===
+NOME: A Duquesa
+DATA: 2008
+NOTA: 4.2
+GENERO: Romance
+SINOPSE_INICIO
+A duquesa Georgina de Devonshire usou de todas as suas influências para participar do cenário político dos ingleses durante o final de 1700.
+Porém, mesmo adorada pelo povo e com todo seu poder e charme, a duquesa não conseguiu conquistar o coração de seu marido.
+SINOPSE_FIM
+===FILME===
+NOME: Superman - O Filme
+DATA: 1978
+NOTA: 2.7
+GENERO: Aventura
+SINOPSE_INICIO
+Pouco antes da destruição do planeta Krypton, o cientista Jor-El envia seu pequeno filho Kal-El em uma nave espacial à Terra. Criado pelos agricultores
+Jonathan e Martha Kent, ele recebe o nome de Clark. Em Metrópolis, onde trabalha como repórter, ele tenta impedir os planos nefastos de Lex Luthor.
+SINOPSE_FIM
+===FILME===
+NOME: Tropa de Elite
+DATA: 2007
+NOTA: 4.6
+GENERO: Ação
+SINOPSE_INICIO
+Nascimento, capitão da tropa de elite do Rio de Janeiro, é escolhido para chefiar uma das equipes cuja missão é apaziguar o Morro do Turano.
+Ele precisa cumprir as ordens enquanto procura por um substituto para ficar em seu lugar. Em meio a um tiroteio, Nascimento e sua equipe resgatam
+Neto e Matias, dois aspirantes a oficiais da PM. Ansiosos para entrar em ação, os dois se candidatam ao curso de formação do Batalhão de Operações
+Policiais Especiais.
+SINOPSE_FIM
+===FILME===
+NOME: O Auto da Compadecida
+DATA: 2000
+NOTA: 4.7
+GENERO: Comédia
+SINOPSE_INICIO
+As aventuras dos nordestinos João Grilo, um sertanejo pobre e mentiroso, e Chicó, o mais covarde dos homens. A dupla luta para sobreviver aplicando golpes
+no pequeno vilarejo de Taperoá, no sertão da Paraíba - nem o temido cangaceiro Severino de Aracaju escapa das artimanhas de João Grilo e Chicó. A dupla tem
+a chance de se redimir com a aparição de Nossa Senhora.
+SINOPSE_FIM
+===FILME===
+NOME: O Auto da Compadecida 2
+DATA: 2024
+NOTA: 3.0
+GENERO: Comédia
+SINOPSE_INICIO
+Depois de anos desaparecido, João Grilo retorna à Taperoá para se juntar ao velho companheiro Chicó. Após sua história de ressurreição ter se espalhado, ele é
+disputado como cabo eleitoral pelos dois políticos mais poderosos da cidade.
+SINOPSE_FIM
+===FILME===
+NOME: Velozes & Furiosos 7
+DATA: 2015
+NOTA: 4.5
+GENERO: Ação
+SINOPSE_INICIO
+Um agente oferece ajuda para cuidar de Shaw em troca do resgate de um "hacker". Dessa vez, não se trata apenas de velocidade: a corrida é pela sobrevivência.
+SINOPSE_FIM
+===FILME===
+NOME: Velozes e Furiosos 5: Operação Rio
+DATA: 2011
+NOTA: 4.2
+GENERO: Ação
+SINOPSE_INICIO
+Desde que o ex-policial Brian O'Conner e Mia Toretto libertaram Dom da prisão, eles viajam pelo mundo para fugir das autoridades. No Rio de Janeiro, são obrigados
+a fazer um último trabalho antes de ganhar sua liberdade definitiva. Brian e Dom montam uma equipe de elite de pilotos de carro para executar a tarefa, mas precisam
+enfrentar um empresário corrupto e também um obstinado agente federal norte-americano.
+SINOPSE_FIM
+===FILME===
+NOME: Quebrando a Banca
+DATA: 2008
+NOTA: 4.1
+GENERO: Ação
+SINOPSE_INICIO
+Ben Campbell, um aluno brilhante do Instituto Tecnológico de Massachusetts, precisa de dinheiro para pagar as mensalidades da faculdade. Ele entra para um grupo de estudantes
+liderado pelo professor Mickey Rosa, que usa seu conhecimento em matemática para ganhar nos cassinos em Las Vegas. Seduzido por sua bela colega e muito dinheiro, Ben descobre
+que os riscos são maiores do que imaginava quando cruza o caminho de Cole Williams.
 SINOPSE_FIM
