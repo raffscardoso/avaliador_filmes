@@ -358,18 +358,3 @@ void listar_filmes(const ArrayDeFilmes *arr){
 
 }
 
-void imprime_filmes(const ArrayDeFilmes* arr) {
-    if (arr->tamanho_atual == 0) {
-        printf("Nenhum filme na memória.\n");
-        return;
-    }
-    for (int i = 0; i < arr->tamanho_atual; i++) {
-        printf("\n-----------------------------------\n");
-        printf("Filme %d:\n", i + 1);
-        printf("  == Nome: %s\n", arr->filmes[i].nome);
-        printf("  == Ano de Lançamento: %d\n", arr->filmes[i].dataLancamento);
-        printf("  == Nota: %.1f\n", arr->filmes[i].nota);
-        printf("  == Gênero: %s\n", arr->filmes[i].tipo);
-        printf("  == Sinopse: %s\n", arr->filmes[i].sinopse ? arr->filmes[i].sinopse : "(vazia)");
-    }
-}

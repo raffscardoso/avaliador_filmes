@@ -26,6 +26,5 @@ void recomenda_aleatorio(const ArrayDeFilmes* arr);
 void salvar_para_arquivo(const char* nome_arquivo, const ArrayDeFilmes* arr);
 void buscar_filme(const ArrayDeFilmes* arr);
 void listar_filmes(const ArrayDeFilmes* arr);
-void imprime_filmes(const ArrayDeFilmes* arr);
 
 #endif // !STRUCT_FILME
