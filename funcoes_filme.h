@@ -15,6 +15,14 @@ typedef struct{
     int capacidade;
 } ArrayDeFilmes;
 
+
+typedef void (*PtrFunc)(ArrayDeFilmes* arr);
+
+typedef struct {
+  char* descricao;
+  PtrFunc executar;
+} OpcaoMenu;
+
 void inicializar_array(ArrayDeFilmes* arr);
 void adicionar_filme_ao_array(ArrayDeFilmes* arr, Filme filme);
 void carregar_filmes(const char* nome_arquivo, ArrayDeFilmes* arr);
