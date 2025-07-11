@@ -6,6 +6,6 @@
 - Rafael Cardoso
 
 ## Compilacao
-` make`
+`make`
 ## Execucao
 `make run`
