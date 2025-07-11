@@ -351,7 +351,7 @@ void listar_filmes(const ArrayDeFilmes *arr){
    printf("  == Ano de Lancamento: %d\n", arr->filmes[escolha - 1].dataLancamento);
    printf("  == Nota: %.1f\n", arr->filmes[escolha - 1].nota);
    printf("  == Genero: %s\n", arr->filmes[escolha - 1].tipo);
-   printf("  == Sinopse: %s\n", arr->filmes[escolha - 1].sinopse ? arr->filmes[escolha].sinopse : "(vazia)");
+   printf("  == Sinopse: %s\n", arr->filmes[escolha - 1].sinopse);
 
    limpar_buffer_entrada_usuario();
  }
