@@ -313,49 +313,51 @@ void buscar_filme(const ArrayDeFilmes* arr) {
 }
 
 void listar_filmes(const ArrayDeFilmes *arr){
- if(arr->tamanho_atual == 0) {
-   printf("Nenhum filme na memoria.\n");
-   return;
- }
+    if(arr->tamanho_atual == 0) {
+        printf("Nenhum filme na memoria.\n");
+        return;
+    }
 
- printf("========== LISTA DE FILMES NA MEMORIA ============");
- for(int i = 0; i < arr->tamanho_atual; i++){
-   printf("\nFilme %d: %s", (i + 1), arr->filmes[i].nome);
- }
+    printf("========== LISTA DE FILMES NA MEMORIA ============");
 
- int opcao; 
+    for(int i = 0; i < arr->tamanho_atual; i++){
+        printf("\nFilme %d: %s", (i + 1), arr->filmes[i].nome);
+    }
 
- printf("\n\nDeseja saber mais detalhes sobre algum filme?\n");
- printf("[1] SIM\n");
- printf("[2] NAO (sair)\n");
- scanf("%d", &opcao);
- limpar_buffer_entrada_usuario();
+    int opcao; 
 
- if(opcao != 1 && opcao != 2){
-   printf("Opcao Invalida! Tente novamente!\n");
-   return;
- }
+    printf("\n\nDeseja saber mais detalhes sobre algum filme?\n");
+    printf("[1] SIM\n");
+    printf("[2] NAO (sair)\n");
+    
+    scanf("%d", &opcao);
+    limpar_buffer_entrada_usuario();
 
- if(opcao == 1){
-   int escolha;
-   printf("\nInsira o numero do filme que deseja saber mais detalhes: ");
-   scanf("%d", &escolha);
+    if(opcao != 1 && opcao != 2){
+        printf("Opcao Invalida! Tente novamente!\n");
+        return;
+    }
 
-   if(escolha < 1 || escolha > arr->tamanho_atual){
-     printf("Numero do filme invalido!\n");
-     return;
-   }
+    if(opcao == 1){
+        int escolha;
+        printf("\nInsira o numero do filme que deseja saber mais detalhes: ");
+        scanf("%d", &escolha);
 
-   printf("Filme %d: \n", escolha);
-   printf("  == Nome: %s\n", arr->filmes[escolha - 1].nome);
-   printf("  == Ano de Lancamento: %d\n", arr->filmes[escolha - 1].dataLancamento);
-   printf("  == Nota: %.1f\n", arr->filmes[escolha - 1].nota);
-   printf("  == Genero: %s\n", arr->filmes[escolha - 1].tipo);
-   printf("  == Sinopse: %s\n", arr->filmes[escolha - 1].sinopse);
+        if(escolha < 1 || escolha > arr->tamanho_atual){
+            printf("Numero do filme invalido!\n");
+            return;
+        }
 
-   limpar_buffer_entrada_usuario();
- }
-   return;
-
+        printf("Filme %d: \n", escolha);
+        printf("  == Nome: %s\n", arr->filmes[escolha - 1].nome);
+        printf("  == Ano de Lancamento: %d\n", arr->filmes[escolha - 1].dataLancamento);
+        printf("  == Nota: %.1f\n", arr->filmes[escolha - 1].nota);
+        printf("  == Genero: %s\n", arr->filmes[escolha - 1].tipo);
+        printf("  == Sinopse: %s\n", arr->filmes[escolha - 1].sinopse);
+         
+        limpar_buffer_entrada_usuario();
+    }
+    
+    return;
 }
 
