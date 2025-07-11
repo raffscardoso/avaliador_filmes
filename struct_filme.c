@@ -33,7 +33,6 @@ void adicionar_filme_ao_array(ArrayDeFilmes* arr, Filme filme){
 
         arr->filmes = novo_bloco;
         arr->capacidade = nova_capacidade;
-        printf("[INFO] Array redimensionado para capacidade de %d filmes.\n", nova_capacidade);
     }
 
     arr->filmes[arr->tamanho_atual] = filme;
