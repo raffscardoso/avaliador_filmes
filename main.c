@@ -1,9 +1,17 @@
+/*
+Linguagem de Programação II, Ciência da Computação 2025.1
+
+Autores:
+- Arthur Ramos Vieira
+- Anna Beatriz Reis dos Reis
+- Ana Beatriz Guerra Mello
+- Rafael Cardoso Silva Santos
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 #include "funcoes_filme.h"
-
-#define OPCAO_SAIDA 6
 
 int main(void) {
     srand(time(NULL));
