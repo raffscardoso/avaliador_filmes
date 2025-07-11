@@ -1,6 +1,18 @@
 #ifndef FUNCOES_FILME
 #define FUNCOES_FILME
 
+// Códigos de reset
+#define RESET          "\033[0m"
+#define RESET_BG       "\033[49m"
+#define RESET_TEXT     "\033[39m"
+
+// Códigos de cores de texto
+#define RED            "\033[31m"
+#define GREEN          "\033[32m"
+
+// Códigos de cores de fundo
+#define BG_BLUE        "\033[44m"
+
 typedef struct{
     char* nome; 
     int dataLancamento; 

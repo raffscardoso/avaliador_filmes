@@ -8,8 +8,9 @@
 int main(void) {
     srand(time(NULL));
 
-    printf("\n=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n");
-    printf("          MOVIELOG");
+    printf("\n" BG_BLUE "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=" RESET "\n");
+    printf(RED "          MOVIELOG" RESET);
+
 
     ArrayDeFilmes meu_banco_de_dados;
     inicializar_array(&meu_banco_de_dados);
@@ -28,8 +29,8 @@ int main(void) {
     int opcao_user = 0;
 
     while (opcao_user != num_opcoes + 1) {
-      printf("\n=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n");
-      printf("            MENU\n");
+      printf("\n" BG_BLUE "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=" RESET "\n");
+      printf(RED "            MENU" RESET "\n");
 
       for (int i = 0; i < num_opcoes; i++) {
             printf("[%d] %s\n", i + 1, menu[i].descricao);
