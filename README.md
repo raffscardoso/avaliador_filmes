@@ -1,4 +1,4 @@
-## LETTERBOXD só que BR
+## MOVIELOG
 ### Integrantes:
 - Arthur Ramos Vieira
 - Anna Beatriz Reis dos Reis
@@ -6,4 +6,4 @@
 - Rafael Cardoso
 
 ## Compilacao
-` gcc main.c struct_filme.c -o ./bin/main.out`
+` gcc main.c struct_filme.c funcoes_aux.c -o ./bin/main.out`
