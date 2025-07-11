@@ -180,7 +180,7 @@ void remover_filme(ArrayDeFilmes* arr){
         printf("[%d]- %s\n", i+1, arr->filmes[i].nome);
     }
     char buffer[10];
-    printf("Digite o numero do film para remover");
+    printf("Digite o numero do filme para remover");
     fgets(buffer, sizeof(buffer), stdin);
     
     int filme_numero;
@@ -203,6 +203,8 @@ void remover_filme(ArrayDeFilmes* arr){
     }
 
     arr->tamanho_atual--;
+
+    printf("\n Aperte ENTER!\n");
 
     limpar_buffer_entrada_usuario();
 
