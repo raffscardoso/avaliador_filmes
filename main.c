@@ -1,30 +1,24 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 #include <time.h>
 #include "struct_filme.h"
 
-void imprime_filme(const ArrayDeFilmes* arr);
+#define OPCAO_SAIDA 6
 
 int main(void) {
-     srand(time(NULL));
+    srand(time(NULL));
 
-
-    printf("-=-=-=-=-=-=-=-=-=-=-\n");
-    printf("LETTERBOXD só que BR\n");
-    printf("-=-=-=-=-=-=-=-=-=-=-\n");
+    printf("\n=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n");
+    printf("          MOVIELOG");
 
     ArrayDeFilmes meu_banco_de_dados;
     inicializar_array(&meu_banco_de_dados);
     carregar_filmes("filmes.txt", &meu_banco_de_dados);
 
-    printf("\n=== FILMES ATUALMENTE NA MEMÓRIA ===\n");
-    imprime_filme(&meu_banco_de_dados);
-
     int opcao_menu = 0;
     char buffer_opcao[10];
 
-    while (opcao_menu != 6) {
+    while (opcao_menu != OPCAO_SAIDA) {
         printf("\n=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n");
         printf("            MENU\n");
         printf("[1] ADICIONAR FILME\n");
@@ -71,20 +65,3 @@ int main(void) {
     return 0;
 }
 
-void imprime_filme(const ArrayDeFilmes* arr) {
-    if (arr->tamanho_atual == 0) {
-        printf("Nenhum filme na memória.\n");
-        return;
-    }
-    for (int i = 0; i < arr->tamanho_atual; i++) {
-        printf("\n-----------------------------------\n");
-        printf("Filme %d:\n", i + 1);
-        printf("  == Nome: %s\n", arr->filmes[i].nome);
-        printf("  == Ano de Lançamento: %d\n", arr->filmes[i].dataLancamento);
-        printf("  == Nota: %.1f\n", arr->filmes[i].nota);
-        printf("  == Gênero: %s\n", arr->filmes[i].tipo);
-        printf("  == Sinopse: %s\n", arr->filmes[i].sinopse ? arr->filmes[i].sinopse : "(vazia)");
-        // Correção no comentário: arr->filmes[i].sinopse
-        // print_boxed_text(arr->filmes[i].sinopse, 50); 
-    }
-}

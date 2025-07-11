@@ -1,44 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <ctype.h>
 #include "struct_filme.h"
+#include "funcoes_aux.h"
 
 #define TAMANHO_INICIAL_ARRAY 10
 #define TAMANHO_LINHA 2048
 #define TAMANHO_SINOPSE 4096
-
-char* converter_string_para_lowercase(const char* str){
-  if(str == NULL){
-    return NULL;
-  }
-
-  char* str_minuscula = malloc(strlen(str) + 1);
-  if(str_minuscula == NULL){
-    perror("Erro na alocacao de memoria na da string em letras minusculas!");
-    return NULL;
-  }
-
-  for(int i = 0; str[i] != '\0'; i++){
-    str_minuscula[i] = tolower((unsigned char)str[i]);
-  }
-  str_minuscula[strlen(str)] = '\0';
-
-  return str_minuscula;
-}
-
-void limpar_buffer_entrada_usuario(){
-  int c;
-  while((c = getchar()) != '\n' && c != EOF);
-}
-
-void remover_nova_linha(char* str){
-    size_t len = strlen(str);
-
-    if(len > 0 && str[len - 1] == '\n'){
-        str[len - 1] = '\0';
-    }
-}
 
 void inicializar_array(ArrayDeFilmes* arr){
     arr->filmes = malloc(TAMANHO_INICIAL_ARRAY * sizeof(Filme));
@@ -83,14 +51,11 @@ void carregar_filmes(const char* nome_arquivo, ArrayDeFilmes* arr){
     char linha[TAMANHO_LINHA];
     Filme filme_temp;
 
-    // Inicializa ponteiros para evitar lixo de memória
     filme_temp.nome = NULL;
     filme_temp.dataLancamento = 0;
     filme_temp.sinopse = NULL;
     filme_temp.nota = 0;
     filme_temp.tipo = NULL;
-
-    //---------------------------------
 
     while(fgets(linha, sizeof(linha), arquivo) != NULL){
         remover_nova_linha(linha);
@@ -148,15 +113,12 @@ void carregar_filmes(const char* nome_arquivo, ArrayDeFilmes* arr){
     }
 
     fclose(arquivo);
-    printf("Carga finalizada!! %d filmes carregados para a memória.\n", arr->tamanho_atual);
 }
 
 void liberar_array(ArrayDeFilmes* arr){
     if(arr->filmes != NULL){
         for(int i = 0; i < arr->tamanho_atual; i++){
-            //free(arr->filmes[i].dataLancamento);
             free(arr->filmes[i].nome);
-            //free(arr->filmes[i].nota);
             free(arr->filmes[i].sinopse);
             free(arr->filmes[i].tipo);
         }
@@ -251,9 +213,9 @@ void remover_filme(ArrayDeFilmes* arr){
 void recomenda_aleatorio(const ArrayDeFilmes* arr) {
     printf("\n----- Recomendação do Dia -----\n");
 
-    int ialeatorio = rand() % arr->tamanho_atual;
+    int aleatorio = rand() % arr->tamanho_atual;
 
-    Filme filme_sorteado = arr->filmes[ialeatorio];
+    Filme filme_sorteado = arr->filmes[aleatorio];
    
     printf("Recomendação: \n\n");
     printf("  == Nome: %s\n", filme_sorteado.nome);
@@ -265,7 +227,6 @@ void recomenda_aleatorio(const ArrayDeFilmes* arr) {
 }
 
 
-//salvar as alterações no banco de dados (arquivo)
 void salvar_para_arquivo(const char* nome_arquivo, const ArrayDeFilmes* arr) {
     FILE* arquivo = fopen(nome_arquivo, "w");
 
@@ -274,7 +235,6 @@ void salvar_para_arquivo(const char* nome_arquivo, const ArrayDeFilmes* arr) {
         return;
     }
 
-    // Percorre o array na memória
     for (int i = 0; i < arr->tamanho_atual; i++) {
         Filme filme_atual = arr->filmes[i];
         
@@ -296,8 +256,8 @@ void salvar_para_arquivo(const char* nome_arquivo, const ArrayDeFilmes* arr) {
     }
 
     fclose(arquivo);
-
 }
+
 void buscar_filme(const ArrayDeFilmes* arr) {
     if (arr->tamanho_atual == 0) {
         printf("Nenhum filme na memória.\n");
@@ -357,9 +317,59 @@ void listar_filmes(const ArrayDeFilmes *arr){
    return;
  }
 
+ printf("========== LISTA DE FILMES NA MEMORIA ============");
  for(int i = 0; i < arr->tamanho_atual; i++){
    printf("\nFilme %d: %s", (i + 1), arr->filmes[i].nome);
  }
+
+ int opcao; 
+
+ printf("\n\nDeseja saber mais detalhes sobre algum filme?\n");
+ printf("[1] SIM\n");
+ printf("[2] NAO (sair)\n");
+ scanf("%d", &opcao);
+ limpar_buffer_entrada_usuario();
+
+ if(opcao != 1 && opcao != 2){
+   printf("Opcao Invalida! Tente novamente!\n");
+   return;
+ }
+
+ if(opcao == 1){
+   int escolha;
+   printf("\nInsira o numero do filme que deseja saber mais detalhes: ");
+   scanf("%d", &escolha);
+
+   if(escolha < 1 || escolha > arr->tamanho_atual){
+     printf("Numero do filme invalido!\n");
+     return;
+   }
+
+   printf("Filme %d: \n", escolha);
+   printf("  == Nome: %s\n", arr->filmes[escolha - 1].nome);
+   printf("  == Ano de Lancamento: %d\n", arr->filmes[escolha - 1].dataLancamento);
+   printf("  == Nota: %.1f\n", arr->filmes[escolha - 1].nota);
+   printf("  == Genero: %s\n", arr->filmes[escolha - 1].tipo);
+   printf("  == Sinopse: %s\n", arr->filmes[escolha - 1].sinopse ? arr->filmes[escolha].sinopse : "(vazia)");
+
+   limpar_buffer_entrada_usuario();
+ }
+   return;
+
 }
 
-
+void imprime_filmes(const ArrayDeFilmes* arr) {
+    if (arr->tamanho_atual == 0) {
+        printf("Nenhum filme na memória.\n");
+        return;
+    }
+    for (int i = 0; i < arr->tamanho_atual; i++) {
+        printf("\n-----------------------------------\n");
+        printf("Filme %d:\n", i + 1);
+        printf("  == Nome: %s\n", arr->filmes[i].nome);
+        printf("  == Ano de Lançamento: %d\n", arr->filmes[i].dataLancamento);
+        printf("  == Nota: %.1f\n", arr->filmes[i].nota);
+        printf("  == Gênero: %s\n", arr->filmes[i].tipo);
+        printf("  == Sinopse: %s\n", arr->filmes[i].sinopse ? arr->filmes[i].sinopse : "(vazia)");
+    }
+}
