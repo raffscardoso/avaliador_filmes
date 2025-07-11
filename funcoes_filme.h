@@ -1,6 +1,5 @@
-#ifndef STRUCT_FILME
-#define STRUCT_FILME
-
+#ifndef FUNCOES_FILME
+#define FUNCOES_FILME
 
 typedef struct{
     char* nome; 
@@ -27,4 +26,4 @@ void salvar_para_arquivo(const char* nome_arquivo, const ArrayDeFilmes* arr);
 void buscar_filme(const ArrayDeFilmes* arr);
 void listar_filmes(const ArrayDeFilmes* arr);
 
-#endif // !STRUCT_FILME
+#endif // !FUNCOES_FILME

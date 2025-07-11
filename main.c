@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include "struct_filme.h"
+#include "funcoes_filme.h"
 
 #define OPCAO_SAIDA 6
 

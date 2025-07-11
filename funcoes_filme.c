@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "struct_filme.h"
+#include "funcoes_filme.h"
 #include "funcoes_aux.h"
 
 #define TAMANHO_INICIAL_ARRAY 10
